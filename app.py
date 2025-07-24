@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # 비밀번호 설정
-PASSWORD = "gutabari2025"  # 원하는 비밀번호로 바꾸세요
+PASSWORD = "9999"  # 원하는 비밀번호로 바꾸세요
 
 # 비밀번호 입력창
 st.title("🔒 구타바리 작품선정 (보안접속)")
