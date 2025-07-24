@@ -21,9 +21,6 @@ if query:
     if not result.empty:
         st.markdown("### ✅ 검색 결과:")
         for _, row in result.iterrows():
-            # 제휴 링크 고정
-            coupang_url = "https://link.coupang.com/a/cpGZ81"
-
             st.markdown(f"""
 ---
 🎬 **영화제목**: {row['영화명']}  
@@ -32,8 +29,7 @@ if query:
 🎞 **장르**: {row['장르']}  
 🗓 **제작년도**: {row['제작연도']}  
 🌍 **제작국가**: {row['제작국가']}  
-🌐 **영화명(영문)**: {row['영화명(영문)']}  
-🔗 [쿠팡에서 보기]({coupang_url})
+🌐 **영화명(영문)**: {row['영화명(영문)']}
 """, unsafe_allow_html=True)
     else:
         st.markdown("### 자! **드가자~** 😎")
