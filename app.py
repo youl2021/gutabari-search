@@ -11,8 +11,19 @@ if query:
     result = df[df['영화명'].str.contains(query, case=False, na=False)]
 
     if not result.empty:
-        st.write("✅ 검색 결과:")
-        st.dataframe(result)
+        st.markdown("### ✅ 검색 결과:")
+
+        # 텍스트로 보기 좋게 출력
+        for idx, row in result.iterrows():
+            st.markdown(f"""
+---
+🎬 **영화제목**: {row['영화명']}  
+📁 **분야**: {row['분야']}  
+🎞 **장르**: {row['장르']}  
+🛠 **제작년도**: {row['제작연도']} / **제작국가**: {row['제작국가']}  
+🌐 **영화명(영문)**: {row['영화명(영문)']}
+            """)
+
     else:
         st.markdown("### 자! **드가자~** 😎")
 
