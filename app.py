@@ -18,7 +18,7 @@ if query:
         for _, row in result.iterrows():
             st.markdown(f"""
 🎬 **영화제목**: {row['영화명']}  
-📽️ <span style="color:red; font-weight:bold;">영화사</span>: {row['영화사'☠️]}  
+📽️ <span style="color:red; font-weight:bold;">영화사</span>: {row['영화사']}  
 📁 **분야**: {row['분야']}  
 🎞 **장르**: {row['장르']}  
 🗓 **제작년도**: {row['제작연도']}  
